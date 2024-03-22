@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+</head>
+
+
+<body>
+	<h2>Registration Form</h2>
+
+	<form action="store" method="post" <fieldset>
+
+		<table>
+			<tr>
+				<th><label for="name">Name:</label><br> </th>
+
+				<td><input type="text" id="name" name="sname" required><br><br> </td>
+			</tr>
+
+			<tr>
+				<th><label for="email">Email:</label><br></th>
+				<td><input type="email" id="email" name="semail" required><br><br></td>
+			</tr>
+
+			<tr>
+				<th><label for="dob">Date of Birth:</label><br></th>
+				<td><input type="date" id="dob" name="sdob" required><br><br></td>
+			</tr>
+
+
+			<tr>
+				<th><label for="phone">Phone Number:</label><br></th>
+				<td><input type="tel" id="phone" name="sphone" required pattern="[0-9]{10}"><br><br></td>
+			</tr>
+
+			<tr>
+				<th><label for="gender">Gender:</label>
+				<td> <input type="radio" id="male" name="gender" value="male" required>
+					<label for="male">Male</label>
+					<input type="radio" id="female" name="gender" value="female" required>
+					<label for="female">Female</label><br><br>
+				</td>
+				</th>
+			</tr>
+
+			<tr>
+				<th>
+					<label for="country">Country:</label><br>
+				</th>
+				<th> <select id="country" name="country" required>
+						<option value="" disabled selected>Select your country</option>
+						<option value="USA">INDIA</option>
+						<option value="USA">RUSSIA</option>
+						<option value="USA">USA</option>
+						<option value="Canada">Canada</option>
+						<option value="UK">UK</option>
+						<!-- Add more countries as needed -->
+					</select><br><br></th>
+			</tr>
+
+
+		</table>
+
+		<br> <br> <input type="submit" value="Submit">
+
+		</fieldset>
+
+	</form>
+
+</body>
+
+</html>
