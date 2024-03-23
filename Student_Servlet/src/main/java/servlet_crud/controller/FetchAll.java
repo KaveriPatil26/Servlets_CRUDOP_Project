@@ -3,6 +3,7 @@ package servlet_crud.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +23,15 @@ public class FetchAll extends HttpServlet {
 		
 		StudentDao studentDao=new StudentDao();
 		List<StudentDto> list=studentDao.fetchAll();
-		resp.getWriter().print(list);
+		//resp.getWriter().print(list);---not in table format
+		
+		req.setAttribute("object", list);
+		
+		RequestDispatcher dis=req.getRequestDispatcher("fetchall.jsp");
+		dis.forward(req, resp); // in the request no data is present 
+		
+		
+		
 		
 	}
 }
